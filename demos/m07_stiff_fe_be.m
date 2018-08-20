@@ -39,7 +39,8 @@ for logk = 2:10
   t = 0; v = cos(t); f = -sin(t);
   for n = 1:nsteps
     t = (n-1)*k;
-    % backward Euler: vnew = v + k*f(t+k, vnew)
+    % backward Euler: 
+    %vnew = v + k*f(t+k, vnew)
     % sub in an re-arrange, carefully this time ;-)
     vnew = (v + k*(-sin(t+k)  + 100*cos(t+k)))  / (1+k*100);
     v = vnew;
