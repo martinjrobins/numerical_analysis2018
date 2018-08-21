@@ -4,8 +4,8 @@
 % Grid and initial data:
 h = .025;                    % space step
 k = .4*h^2;                  % time step (try .4 -> .51!)
-%x = (-1+h:h:1-h)';           % grid
-x = (-1+h:h:1)';            % grid, for periodic
+x = (-1+h:h:1-h)';           % grid
+%x = (-1+h:h:1)';            % grid, for periodic
 v = abs(x-0.2)<.3;           % initial data: square wave
 
 
@@ -23,7 +23,7 @@ b = 1/h^2;
 main = a*sparse(ones(N,1));
 off  = b*sparse(ones(N-1,1));
 L = diag(main) + diag(off,1) + diag(off,-1);
-L(1,end) = b; L(end,1) = b;  %  uncomment for periodic BCs
+%L(1,end) = b; L(end,1) = b;  %  uncomment for periodic BCs
 
 Tf = 1;
 % adjust either final time or time-step to have integer steps

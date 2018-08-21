@@ -19,10 +19,10 @@ H = 1/h^4 * H;
 %% BCs
 % to do perodic we would have various corner terms to fill in...
 % Or here's a trick: build the Laplacian
-L = spdiags([e  -2*e  e], [-1 0 1], N,N);
-L(1,end) = 1; L(end,1) = 1;
-L = 1/h^2 * L;
-H = -L^2;
+%L = spdiags([e  -2*e  e], [-1 0 1], N,N);
+%L(1,end) = 1; L(end,1) = 1;
+%L = 1/h^2 * L;
+%H = -L^2;
 
 
 Tf = 0.5;
