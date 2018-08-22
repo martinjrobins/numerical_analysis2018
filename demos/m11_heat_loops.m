@@ -5,7 +5,7 @@
 h = .025;                    % space step
 k = .4*h^2;                  % time step (try .4 -> .51!)
 x = (-1+h:h:1-h)';           % grid
-v = abs(x-0.2)<.3;           % initial data: square wave
+v = abs(x-0.2)<.3          % initial data: square wave
 N = length(x);
 
 figure(1); clf;
